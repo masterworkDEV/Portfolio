@@ -1,40 +1,56 @@
 <template>
-  <section class="mx-auto px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-7" id="contact">
+  <section class="mx-auto px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="contact">
     <div class="flex justify-between items-start max-sm:block">
       <div>
-        <h3 class="text-3xl max-sm:text-xl font-semibold text-[#7562e0] dark:text-white">
+        <h3 class="text-2xl max-sm:text-[1rem] font-semibold text-[#7562e0] dark:text-white">
           Connect with me:
         </h3>
         <p class="text-white">Satisfied with me? Please contact me</p>
         <ul class="flex items-center gap-5 mt-5">
           <li>
             <a href="">
-              <FontAwesomeIcon :icon="faInstagram" size="xl" class="text-[#7562e0]" />
+              <FontAwesomeIcon
+                :icon="faInstagram"
+                size="xl"
+                class="text-[#7562e0] hover:text-white transition"
+              />
             </a>
           </li>
 
           <li>
             <a href="">
-              <FontAwesomeIcon :icon="faTwitter" size="xl" class="text-[#7562e0]" />
+              <FontAwesomeIcon
+                :icon="faTwitter"
+                size="xl"
+                class="text-[#7562e0] hover:text-white transition"
+              />
             </a>
           </li>
           <li>
             <a href="">
-              <FontAwesomeIcon :icon="faLinkedinIn" size="xl" class="text-[#7562e0]" />
+              <FontAwesomeIcon
+                :icon="faLinkedinIn"
+                size="xl"
+                class="text-[#7562e0] hover:text-white transition"
+              />
             </a>
           </li>
           <li>
             <a href="">
-              <FontAwesomeIcon :icon="faMailBulk" size="xl" class="text-[#7562e0]" />
+              <FontAwesomeIcon
+                :icon="faMailBulk"
+                size="xl"
+                class="text-[#7562e0] hover:text-white transition"
+              />
             </a>
           </li>
         </ul>
       </div>
-      <form class="w-2/4 max-sm:w-full max-sm:mt-10 mb-5">
-        <h4 class="text-2xl max-sm:text-xl text-white mb-5">Contact me let's make magic</h4>
+      <form class="w-2/4 max-sm:w-full max-sm:mt-10 mb-5" @submit.prevent="handleFormSubmission">
+        <h4 class="text-xl max-sm:text-[1rem] text-white mb-5">Contact me let's make magic</h4>
 
         <label for=" username"></label>
-        <div class="flex mb-4">
+        <div class="flex mb-3">
           <span
             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
           >
@@ -56,11 +72,12 @@
             id="website-admin"
             class="rounded-none rounded-e-lg bg-[#31313f] text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
             placeholder="John Doe..."
+            v-model="name"
           />
         </div>
-        <label for="email"></label>
+        <small v-if="nameError" class="text-red-600">{{ nameError }}</small>
 
-        <div class="flex mb-4">
+        <div class="flex mb-3">
           <span
             class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
           >
@@ -84,28 +101,79 @@
             name="email"
             id="website-admin"
             class="rounded-none rounded-e-lg bg-[#31313f] text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
-            placeholder="Johndoe@gmail.com`"
+            placeholder="Johndoe@gmail.com"
+            v-model="email"
           />
         </div>
+        <small v-if="emailError" class="text-red-600">{{ emailError }}</small>
 
         <textarea
           id="message"
           rows="4"
           class="mb-4 block p-2.5 w-full text-sm text-white bg-[#31313f] rounded-lg focus:ring-blue-500 dark:placeholder-gray-400 dark:text-white"
           placeholder="Write your thoughts here..."
-        ></textarea>
-        <button class="w-1/4 p-2.5 text-white bg-[#7562e0] rounded-lg max-sm:w-full">Send</button>
+          v-model="message"
+        >
+        </textarea>
+
+        <button
+          class="w-1/4 p-2.5 text-white bg-[#7562e0] rounded-lg max-sm:w-full"
+          :disabled="!validate"
+        >
+          Send
+        </button>
       </form>
     </div>
   </section>
 </template>
 
 <script setup>
+import { computed, ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const nameError = ref(null)
+const emailError = ref(null)
+const messageError = ref(null)
+
+const validate = computed(() => {
+  let isValid = true
+  nameError.value = null
+  emailError.value = null
+  messageError.value = null
+
+  if (name.value.trim() === '') {
+    nameError.value = 'Name cannot be empty'
+    isValid = false
+  }
+
+  if (email.value.trim() === '') {
+    emailError.value = 'Email cannot be empty'
+    isValid = false
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email.value)) {
+    emailError.value = 'Invalid email address'
+    isValid = false
+  }
+  return isValid
+})
+
+const handleFormSubmission = () => {
+  if (validate.value === true) {
+    console.log(name.value, email.value, message.value)
+    name.value = ''
+    email.value = ''
+    message.value = ''
+    window.location.href = '#'
+  }
+}
 </script>
 
 <style>

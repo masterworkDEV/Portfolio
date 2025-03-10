@@ -15,6 +15,9 @@ module.exports = {
       //   'default-light': '#1a1a29',
       // },
     },
+    screen: {
+      maxSmallest: '375px',
+    },
   },
   plugins: [require('flowbite/plugin')],
 }

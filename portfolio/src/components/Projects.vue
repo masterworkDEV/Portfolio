@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-7" id="projects">
+  <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="projects">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white mt-14 mb-5"
     >
@@ -23,11 +23,11 @@
           class="w-full h-2/4 object-cover border border-[#7562e0] opacity-60 rounded-lg"
         />
         <h3
-          class="self-center text-xl font-semibold uppercase whitespace-nowrap text-[#7562e0] dark:text-white mt-4 mb-2"
+          class="self-center text-xl max-sm:text-[1rem] font-semibold uppercase whitespace-nowrap text-[#7562e0] dark:text-white mt-4 mb-2"
         >
           {{ project.title }}
         </h3>
-        <p class="text-white">
+        <p class="text-white leading-6 max-sm:text-sm">
           {{
             project.description.length <= 80
               ? project.description

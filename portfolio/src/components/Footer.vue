@@ -1,5 +1,5 @@
 <template>
-  <footer class="px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-7">
+  <footer class="px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-5">
     <ul
       class="flex justify-between items-center text-[#bdbdbd7e] max-sm:text-[.7rem] max-sm:flex-wrap"
     >
@@ -12,23 +12,39 @@
     <ul class="flex items-center gap-5 mt-5 mb-5">
       <li>
         <a href="">
-          <FontAwesomeIcon :icon="faInstagram" size="xl" class="text-[#7562e0]" />
+          <FontAwesomeIcon
+            :icon="faInstagram"
+            size="xl"
+            class="text-[#7562e0] hover:text-white transition"
+          />
         </a>
       </li>
 
       <li>
         <a href="">
-          <FontAwesomeIcon :icon="faTwitter" size="xl" class="text-[#7562e0]" />
+          <FontAwesomeIcon
+            :icon="faTwitter"
+            size="xl"
+            class="text-[#7562e0] hover:text-white transition"
+          />
         </a>
       </li>
       <li>
         <a href="">
-          <FontAwesomeIcon :icon="faLinkedinIn" size="xl" class="text-[#7562e0]" />
+          <FontAwesomeIcon
+            :icon="faLinkedinIn"
+            size="xl"
+            class="text-[#7562e0] hover:text-white transition"
+          />
         </a>
       </li>
       <li>
         <a href="">
-          <FontAwesomeIcon :icon="faMailBulk" size="xl" class="text-[#7562e0]" />
+          <FontAwesomeIcon
+            :icon="faMailBulk"
+            size="xl"
+            class="text-[#7562e0] hover:text-white transition"
+          />
         </a>
       </li>
     </ul>

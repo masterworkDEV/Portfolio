@@ -1,6 +1,8 @@
 <template >
-  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-sm:px-7" id="about">
-    <h2 class="self-center text-2xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white">
+  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="about">
+    <h2
+      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white"
+    >
       About Me
     </h2>
     <p class="mt-2 tracking-wide leading-7 text-white">
@@ -10,7 +12,7 @@
     </p>
     <span class="mt-5 flex items-center gap-5">
       <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>2+</b></h1>
-      <p class="text-2xl text-white max-sm:text-xl">
+      <p class="text-xl text-white max-sm:text-[1rem]">
         Years of experience. Specialised in building apps, while ensuring a seamless web experience
         <br />
         for end users.

@@ -1,24 +1,30 @@
 <template>
-  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-7" id="service">
+  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="service">
     <h2
-      class="self-center text-2xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white mt-14 mb-5"
+      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white mt-14 mb-5"
     >
       The services i offer
     </h2>
     <div class="grid grid-cols-3 place-content-center gap-5 max-sm:grid-cols-2">
       <article
-        class="border-2 border-white rounded-2xl w-full min-h-70 flex justify-center flex-col items-center p-5"
+        class="border-2 border-white rounded-2xl w-full min-h-52 flex justify-center flex-col items-center p-5"
         v-for="service of myService"
         :key="service"
       >
         <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white" />
 
-        <h4 class="mb-5 mt-3 uppercase text-xl max-sm:text-[1rem] text-white text-center">
+        <h4 class="mb-5 mt-3 uppercase text-xl max-sm:text-sm text-white text-center">
           {{ service.name }}
 
-          {{ service.title.length < 100 ? service.title : service.title.slice(0, 100) + '...' }}
+          {{ service.title }}
         </h4>
-        <p class="text-center text-white">{{ service.description }}</p>
+        <p class="text-center text-white max-sm:text-sm">
+          {{
+            service.description.length <= 50
+              ? service.description
+              : service.description.slice(0, 50) + '...'
+          }}
+        </p>
       </article>
     </div>
   </section>
