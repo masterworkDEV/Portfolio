@@ -38,7 +38,7 @@
           <a
             :href="project.liveUrl"
             target="blank"
-            class="w-full h-10 flex text-center justify-center text-white bg-[#7562e0] rounded-lg"
+            class="w-full h-10 flex text-center justify-center text-white bg-[#7562e0] rounded-lg max-sm:text-sm"
           >
             <button>View Live</button>
           </a>
@@ -46,7 +46,7 @@
           <a
             :href="project.githubLink"
             target="blank"
-            class="w-full h-10 flex text-center justify-center text-white border border-[#7562e0] rounded-lg"
+            class="w-full h-10 flex text-center justify-center text-white border border-[#7562e0] rounded-lg max-sm:text-sm"
           >
             <button>Github Repo</button>
           </a>

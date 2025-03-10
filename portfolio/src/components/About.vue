@@ -5,10 +5,11 @@
     >
       About Me
     </h2>
-    <p class="mt-2 tracking-wide leading-7 text-white">
-      I'm a software developer with a creative mind and a problem-solving spirit. I believe in
-      writing clean, maintainable code and am committed to delivering high-quality software that
-      meets users' needs.
+    <p class="mt-2 tracking-wide leading-7 text-white max-sm:text-sm">
+      I'm a passionate frontend developer with a keen eye for detail and a love for creating
+      engaging user experiences. I specialize in
+      <b>React.JS, Vue.JS, Node.JS, Express.JS, MongoDB, </b>. My goal is to build clean, efficient,
+      and user-friendly interfaces that solve real problems.
     </p>
     <span class="mt-5 flex items-center gap-5">
       <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>2+</b></h1>
@@ -20,7 +21,7 @@
     </span>
     <div class="mt-10 grid grid-cols-4 place-content-center gap-10 max-xl:gap-4 max-sm:grid-cols-2">
       <div
-        class="bg-[#bdbdbd] w-full h-52 max-sm:h-40 flex justify-end flex-col text-start items-start"
+        class="stack bg-[#bdbdbd] w-full h-52 max-sm:h-40 flex justify-end flex-col text-start items-start"
         v-for="service of myService.slice(0, 4)"
         :key="service"
       >
@@ -90,5 +91,8 @@ const myService = ref([
 ])
 </script>
 
-<style>
+<style scoped>
+.stack:first-child {
+  background: #7562e0;
+}
 </style>
