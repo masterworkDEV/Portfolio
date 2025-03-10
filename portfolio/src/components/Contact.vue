@@ -148,15 +148,16 @@ const validate = computed(() => {
   emailError.value = null
   messageError.value = null
 
-  if (name.value.trim() === '') {
+  if (!name.value.trim()) {
     nameError.value = 'Name cannot be empty'
     isValid = false
   }
 
-  if (email.value.trim() === '') {
+  if (!email.value.trim()) {
     emailError.value = 'Email cannot be empty'
     isValid = false
   }
+  ;``
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email.value)) {
     emailError.value = 'Invalid email address'
