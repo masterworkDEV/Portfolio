@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav
-      class="fixed right-0 left-0 top-0 pt-8 pb-8 max-sm:pt-4 max-sm:pb-4 bg-white border-gray-200 dark:bg-white custom-nav-background z-20"
+      class="fixed right-0 left-0 top-0 pt-8 pb-8 max-sm:pt-4 max-sm:pb-4 bg-white border-gray-200 dark:bg-white custom-nav-background z-30"
       :class="initialScroll && 'custom-nav-active'"
     >
       <div class="flex flex-wrap items-center justify-between px-20 max-xl:px-10 max-sm:px-5">
@@ -43,7 +43,7 @@
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-[#7562e0] md:p-0 dark:text-white md:dark:text-[#7562e0]"
+                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-[#7562e0] md:p-0 dark:text-white md:dark:text-[#7562e0] text-sm"
                 aria-current="page"
                 >Home</a
               >
@@ -51,28 +51,28 @@
             <li>
               <a
                 href="#about"
-                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all"
+                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all text-sm"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#service"
-                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all"
+                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all text-sm"
                 >Services</a
               >
             </li>
             <li>
               <a
                 href="#projects"
-                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all"
+                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all text-sm"
                 >Projects</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all"
+                class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#7562e0] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-all text-sm"
                 >Contact</a
               >
             </li>
@@ -82,7 +82,10 @@
     </nav>
 
     <!-- nav bar for small devices -->
-    <div class="navbar hidden max-sm:block" :class="navbar && 'active'">
+    <div
+      class="navbar hidden max-sm:block"
+      :class="navbar && 'active  animate__animated  animate__bounceInDown'"
+    >
       <ul
         class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700 nav-links"
       >
@@ -103,7 +106,10 @@
         </li>
       </ul>
     </div>
-    <div v-if="navbar" class="overlay w-full h-full fixed bg-[rgba(0,0,0,0.5)] z-10"></div>
+    <div
+      v-if="navbar"
+      class="overlay w-full h-full fixed bg-[rgba(0,0,0,0.5)] z-10 animate__animated animate__bounceInUp"
+    ></div>
   </header>
 </template>
 
@@ -141,10 +147,9 @@ const handleNavbar = () => {
 .navbar {
   background: #181824;
   position: fixed;
-  top: 7%;
-  left: -100%;
+  top: 8%;
+  display: none;
   width: 100%;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s;
   box-shadow: 0px 2px 5px #181824;
   z-index: 999;
 }
@@ -156,6 +161,6 @@ const handleNavbar = () => {
 }
 
 .navbar.active {
-  left: 0;
+  display: block;
 }
 </style>

@@ -2,14 +2,24 @@
   <section class="px-20 max-md:pt-10 max-xl:px-10 max-sm:px-5">
     <div class="pt-48 max-sm:pt-24 flex justify-between max-sm:flex-col">
       <div>
-        <h3 class="pb-3 text-2xl max-md:text-xl text-white">Hello, i'm</h3>
-        <h1 class="pb-3 text-6xl text-white max-xl:text-5xl max-sm:text-3xl">Godwin M. Kelvin</h1>
-        <p class="pb-3 tracking-wide leading-7 pr-72 text-white max-xl:pr-24 max-sm:pr-0">
+        <h3 class="pb-3 text-2xl max-md:text-xl text-white animate__animated animate__flipInY">
+          Hello, i'm
+        </h3>
+        <h1
+          class="pb-3 text-6xl text-white max-xl:text-5xl max-sm:text-3xl animate__animated animate__flipInX animate__delay-1s"
+        >
+          Godwin M. Kelvin
+        </h1>
+        <p
+          class="pb-3 tracking-wide leading-7 pr-72 text-white max-xl:pr-24 max-sm:pr-0 animate__animated animate__fadeInUp animate__delay-2s"
+        >
           I'm a software developer with a creative mind and a problem-solving spirit. I believe in
           writing clean, maintainable code and am committed to delivering high-quality software that
           meets users' needs.
         </p>
-        <div class="flex items-center gap-3 mt-5 max-xl:mb-10">
+        <div
+          class="flex items-center gap-3 mt-5 max-xl:mb-10 animate__animated animate__backInLeft animate__delay-3s"
+        >
           <a
             href="#about"
             class="flex items-center justify-center gap-2 w-48 h-10 text-white bg-[#7562e0] hover:bg-white hover:text-black rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
@@ -33,7 +43,7 @@
           </a>
         </div>
       </div>
-      <div>
+      <div class="animate__animated animate__backInRight animate__delay-4s">
         <img
           :src="avatar"
           alt="portfolio hero image"
