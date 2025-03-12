@@ -7,13 +7,16 @@
     </h2>
     <div class="grid grid-cols-3 place-content-center gap-5 max-sm:grid-cols-2">
       <article
-        class="stack border-2 border-white rounded-2xl w-full h-72 max-sm:max-h-52 flex justify-center flex-col items-center p-3 overflow-auto"
+        class="stack border-2 border-white rounded-2xl w-full h-72 max-sm:max-h-40 flex justify-center flex-col items-center p-3 overflow-auto"
         v-for="service of myService"
         :key="service"
       >
-        <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white" />
-
-        <h4 class="title mb-5 mt-3 uppercase text-xl max-sm:text-sm text-white text-center">
+        <div class="max-sm:text-[.7rem]">
+          <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white" />
+        </div>
+        <h4
+          class="title mb-5 mt-3 max-sm:mt-1 max-sm:mb-2 uppercase text-xl max-sm:text-sm text-white text-center"
+        >
           {{ service.name }}
 
           {{ service.title }}
@@ -94,18 +97,7 @@ const myService = ref([
   border: #7562e0 2px solid;
 }
 
-/* title */
-.title {
-  color: white;
-}
-
-.title:nth-last-child(1) {
-  color: #7562e0;
-}
-.title:nth-last-child(3) {
-  color: #7562e0;
-}
-.title:nth-last-child(5) {
-  color: #7562e0;
+.stack::-webkit-scrollbar {
+  display: none;
 }
 </style>

@@ -111,6 +111,7 @@
           id="message"
           rows="4"
           class="mb-4 block p-2.5 w-full text-sm text-white bg-[#31313f] rounded-lg focus:ring-blue-500 dark:placeholder-gray-400 dark:text-white"
+          required
           placeholder="Write your thoughts here..."
           v-model="message"
         >
@@ -128,7 +129,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
@@ -142,7 +143,7 @@ const nameError = ref(null)
 const emailError = ref(null)
 const messageError = ref(null)
 
-const validate = computed(() => {
+const validate = () => {
   let isValid = true
   nameError.value = null
   emailError.value = null
@@ -153,21 +154,21 @@ const validate = computed(() => {
     isValid = false
   }
 
-  if (!email.value.trim()) {
+  if (email.value.trim() === '') {
     emailError.value = 'Email cannot be empty'
     isValid = false
   }
-  ;``
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email.value)) {
     emailError.value = 'Invalid email address'
     isValid = false
   }
   return isValid
-})
+}
 
 const handleFormSubmission = () => {
-  if (validate.value === true) {
+  if (validate()) {
     console.log(name.value, email.value, message.value)
     name.value = ''
     email.value = ''

@@ -12,7 +12,7 @@
         <div class="flex items-center gap-3 mt-5 max-xl:mb-10">
           <a
             href="#about"
-            class="flex items-center justify-center gap-2 w-48 h-10 text-white bg-[#7562e0] hover:bg-white hover:text-black rounded max-xl:w-40 max-sm:w-28 transition-all"
+            class="flex items-center justify-center gap-2 w-48 h-10 text-white bg-[#7562e0] hover:bg-white hover:text-black rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
             <button>
               <span> About Me </span>
@@ -23,7 +23,7 @@
           <a
             href="https://www.canva.com/design/DAGbiRk1nvI/mWPy6BSbkIRJLduNOcLmJw/view?utm_content=DAGbiRk1nvI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb384005104"
             target="blank"
-            class="flex items-center justify-center gap-2 w-48 h-10 text-white border-2 border-[#7562e0] hover:bg-[#7562e0] rounded max-xl:w-40 max-sm:w-28 transition-all"
+            class="flex items-center justify-center gap-2 w-48 h-10 text-white border-2 border-[#7562e0] hover:bg-[#7562e0] rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
             <button>
               <span> Resume </span>
@@ -54,4 +54,3 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 <style>
 </style>
-``

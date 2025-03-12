@@ -8,8 +8,8 @@
     <p class="mt-2 tracking-wide leading-7 text-white max-sm:text-sm">
       I'm a passionate frontend developer with a keen eye for detail and a love for creating
       engaging user experiences. I specialize in
-      <b>React.JS, Vue.JS, Node.JS, Express.JS, MongoDB, </b>. My goal is to build clean, efficient,
-      and user-friendly interfaces that solve real problems.
+      <b>React.JS, Vue.JS, Node.JS,MongoDB, </b>. My goal is to build clean, efficient, and
+      user-friendly interfaces that solve real problems.
     </p>
     <span class="mt-5 flex items-center gap-5">
       <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>2+</b></h1>
@@ -25,7 +25,9 @@
         v-for="service of myService.slice(0, 4)"
         :key="service"
       >
-        <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white ml-8 max-xl:ml-4" />
+        <div class="max-sm:text-sm">
+          <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white ml-8 max-xl:ml-4" />
+        </div>
         <h4
           class="flex items-end mt-3 mb-5 uppercase text-xl max-sm:text-[1rem] text-white ml-8 max-xl:ml-4"
         >

@@ -65,7 +65,8 @@ const projects = ref([
     title: 'E-Store',
     description:
       'Your destination for the latest trends and timeless classics. Shop now and express your style',
-    imageUrl: 'src/assets/images/e-store.png',
+    imageUrl:
+      'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
     liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
     githubLink: 'apc',
   },
@@ -73,9 +74,10 @@ const projects = ref([
     title: 'Nola Education',
     description:
       'A comprehensive learning platform that offers a wide range of interactive courses and engaging quizzes to help you master any subject.',
-    imageUrl: '../assets/images/e-store.png',
+    imageUrl:
+      'https://img.freepik.com/free-photo/mobile-phone-with-white-screen-diary-near-painting-colors-wooden-table_23-2148050728.jpg?t=st=1741746381~exp=1741749981~hmac=1e67de51fbf3e3359bf4b108230436c0def99738f8de8dc3fc9ffefa046592e3&w=1060',
 
-    liveUrl: 'https://learn-from-nola-6sj9r2wki-masterworkdev1s-projects.vercel.app/',
+    liveUrl: 'https://learn-from-nola.vercel.app/',
     githubLink: 'https://github.com/masterworkDEV/Learnly-Challenge/tree/main/m-education',
   },
   {
