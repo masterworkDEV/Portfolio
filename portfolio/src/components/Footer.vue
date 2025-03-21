@@ -11,7 +11,7 @@
     </ul>
     <ul class="flex items-center gap-5 mt-5 mb-5">
       <li>
-        <a href="">
+        <a href="https://www.instagram.com/masterworkdev/" target="_blank">
           <FontAwesomeIcon
             :icon="faInstagram"
             size="xl"
@@ -21,7 +21,7 @@
       </li>
 
       <li>
-        <a href="">
+        <a href="https://x.com/MasterworkDEV" target="_blank">
           <FontAwesomeIcon
             :icon="faTwitter"
             size="xl"
@@ -30,7 +30,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="https://www.linkedin.com/in/kelvin-godwin-793062346/" target="_blank">
           <FontAwesomeIcon
             :icon="faLinkedinIn"
             size="xl"
@@ -39,7 +39,9 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a
+          href="mailto:godwinkelvin025@gmail.com?subject=Information Enquiry &body=Hi masterworkDEV i'd like discuss a project with you"
+        >
           <FontAwesomeIcon
             :icon="faMailBulk"
             size="xl"
