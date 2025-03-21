@@ -77,7 +77,7 @@ const projects = ref([
     imageUrl:
       'https://img.freepik.com/free-photo/mobile-phone-with-white-screen-diary-near-painting-colors-wooden-table_23-2148050728.jpg?t=st=1741746381~exp=1741749981~hmac=1e67de51fbf3e3359bf4b108230436c0def99738f8de8dc3fc9ffefa046592e3&w=1060',
 
-    liveUrl: 'https://learn-from-nola.vercel.app/',
+    liveUrl: 'https://learn-with-nola.vercel.app/',
     githubLink: 'https://github.com/masterworkDEV/Learnly-Challenge/tree/main/m-education',
   },
   {
