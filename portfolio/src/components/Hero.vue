@@ -11,14 +11,14 @@
           Godwin M. Kelvin
         </h1>
         <p
-          class="pb-3 tracking-wide leading-7 pr-72 text-white max-xl:pr-24 max-sm:pr-0 animate__animated animate__fadeInUp animate__delay-2s"
+          class="pb-3 tracking-wide leading-7 pr-72 text-white max-xl:pr-24 max-sm:pr-0 animate__animated animate__fadeIn animate__delay-2s"
         >
           I'm a software developer with a creative mind and a problem-solving spirit. I believe in
           writing clean, maintainable code and am committed to delivering high-quality software that
           meets users' needs.
         </p>
         <div
-          class="flex items-center gap-3 mt-5 max-xl:mb-10 animate__animated animate__backInLeft animate__delay-3s"
+          class="flex items-center gap-3 mt-5 max-xl:mb-10 animate__animated animate__fadeInUp animate__delay-3s"
         >
           <a
             href="#about"
@@ -43,11 +43,11 @@
           </a>
         </div>
       </div>
-      <div class="animate__animated animate__backInRight animate__delay-4s">
+      <div class="animate__animated animate__fadeIn animate__delay-4s">
         <img
           :src="avatar"
           alt="portfolio hero image"
-          class="w-full h-3/4 object-cover rounded max-xl:h-full max-md:h-3/4 max-sm:h-80"
+          class="w-full h-3/4 object-cover rounded-lg max-xl:h-full max-md:h-3/4 max-sm:h-80"
         />
       </div>
     </div>

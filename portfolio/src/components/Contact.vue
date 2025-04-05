@@ -125,6 +125,9 @@
         </button>
       </form>
     </div>
+    <div v-if="successModal" class="bg-[#181824] p-2 flex justify-center items-center">
+      <p class="text-center">Your message was sent successfully</p>
+    </div>
   </section>
 </template>
 
@@ -142,6 +145,7 @@ const message = ref('')
 const nameError = ref(null)
 const emailError = ref(null)
 const messageError = ref(null)
+const successModal = ref(false)
 
 const validate = () => {
   let isValid = true
@@ -173,7 +177,7 @@ const handleFormSubmission = () => {
     name.value = ''
     email.value = ''
     message.value = ''
-    window.location.href = '#'
+    setTimeout(() => (successModal.value = true), 3000)
   }
 }
 </script>

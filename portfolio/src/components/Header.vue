@@ -84,10 +84,10 @@
     <!-- nav bar for small devices -->
     <div
       class="navbar hidden max-sm:block"
-      :class="navbar && 'active  animate__animated  animate__bounceInDown'"
+      :class="navbar && 'active  animate__animated  animate__fadeInRightBig'"
     >
       <ul
-        class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700 nav-links"
+        class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700 nav-links animate__animated animate__fadeIn animate__delay-1s"
       >
         <li class="text-white px-3 py-2" @click="navbar = !navbar">
           <a href="#" aria-current="page">Home</a>
@@ -105,16 +105,21 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
+      <button>
+        <FontAwesomeIcon :icon="faNight" />
+      </button>
     </div>
+    <!-- animation causes light flash -->
     <div
       v-if="navbar"
-      class="overlay w-full h-full fixed bg-[rgba(0,0,0,0.5)] z-10 animate__animated animate__bounceInUp"
+      class="overlay w-full h-full fixed bg-[rgba(0,0,0,0.3)] z-10 animate__animated animate__fadeInLeftBig"
     ></div>
   </header>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const initialScroll = ref(null)
 const navbar = ref(false)

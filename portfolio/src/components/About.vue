@@ -19,17 +19,21 @@
         for end users.
       </p>
     </span>
-    <div class="mt-10 grid grid-cols-4 place-content-center gap-10 max-xl:gap-4 max-sm:grid-cols-2">
+    <div class="mt-10 grid grid-cols-4 place-content-center gap-10 max-xl:gap-4 max-sm:gap-2">
       <div
-        class="stack bg-[#bdbdbd] w-full h-52 max-sm:h-40 flex justify-end flex-col text-start items-start"
+        class="stack bg-[#bdbdbd] w-full h-52 max-sm:h-30 flex justify-end flex-col text-start items-start"
         v-for="service of myService.slice(0, 4)"
         :key="service"
       >
-        <div class="max-sm:text-sm">
-          <FontAwesomeIcon :icon="service.icon" size="3x" class="text-white ml-8 max-xl:ml-4" />
+        <div class="max-sm:text-[.7rem]">
+          <FontAwesomeIcon
+            :icon="service.icon"
+            size="3x"
+            class="text-white ml-8 max-xl:ml-4 max-sm:ml-2"
+          />
         </div>
         <h4
-          class="flex items-end mt-3 mb-5 uppercase text-xl max-sm:text-[1rem] text-white ml-8 max-xl:ml-4"
+          class="flex items-end mt-3 mb-5 uppercase text-xl max-xl:text-[1rem] max-sm:text-[.6rem] text-white ml-8 max-xl:ml-4 max-sm:ml-2"
         >
           {{ service.name }} <br />
 
