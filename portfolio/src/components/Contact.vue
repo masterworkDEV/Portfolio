@@ -126,7 +126,7 @@
       </form>
     </div>
     <div v-if="successModal" class="bg-[#181824] p-2 flex justify-center items-center">
-      <p class="text-center text-white">Your message was sent successfully</p>
+      <p class="text-center text-white">Thank you, your message was sent successfully</p>
     </div>
   </section>
 </template>

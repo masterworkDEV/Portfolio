@@ -35,10 +35,10 @@
             target="blank"
             class="flex items-center justify-center gap-2 w-48 h-10 text-white border-2 border-[#7562e0] hover:bg-[#7562e0] rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
-            <button>
+            <button class="hover:animate-none animate__zoomIn animate-bounce animate__delay-5s">
               <span> Resume </span>
 
-              <FontAwesomeIcon :icon="faEye" size="xs" />
+              <FontAwesomeIcon :icon="faEye" size="xs" class="" />
             </button>
           </a>
         </div>
