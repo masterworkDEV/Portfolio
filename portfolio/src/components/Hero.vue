@@ -11,7 +11,7 @@
           Godwin M. Kelvin
         </h1>
         <p
-          class="pb-3 tracking-wide leading-7 pr-72 text-white max-xl:pr-24 max-sm:pr-0 animate__animated animate__fadeIn animate__delay-2s"
+          class="pb-3 tracking-wide leading-7 pr-24 text-white max-sm:pr-0 animate__animated animate__fadeIn animate__delay-2s"
         >
           I'm a software developer with a creative mind and a problem-solving spirit. I believe in
           writing clean, maintainable code and am committed to delivering high-quality software that
