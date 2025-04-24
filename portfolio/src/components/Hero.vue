@@ -1,7 +1,7 @@
 <template>
   <section class="px-20 max-md:pt-10 max-xl:px-10 max-sm:px-5">
     <div class="pt-48 max-sm:pt-24 flex justify-between max-sm:flex-col">
-      <div>
+      <div class="w-full">
         <h3 class="pb-3 text-2xl max-md:text-xl text-white animate__animated animate__flipInY">
           Hello, i'm
         </h3>
@@ -31,7 +31,7 @@
           </a>
 
           <a
-            href="https://www.canva.com/design/DAGbiRk1nvI/mWPy6BSbkIRJLduNOcLmJw/view?utm_content=DAGbiRk1nvI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb384005104"
+            href="https://www.canva.com/design/DAGlAqwpLng/giGL_s9SN1sdn6cUp90ErQ/view?utm_content=DAGlAqwpLng&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2e62da40b7"
             target="blank"
             class="flex items-center justify-center gap-2 w-48 h-10 text-white border-2 border-[#7562e0] hover:bg-[#7562e0] rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
@@ -43,11 +43,11 @@
           </a>
         </div>
       </div>
-      <div class="animate__animated animate__fadeIn animate__delay-4s">
+      <div class="animate__animated animate__fadeIn animate__delay-4s w-full">
         <img
           :src="avatar"
           alt="portfolio hero image"
-          class="w-full h-3/4 object-cover rounded-lg max-xl:h-full max-md:h-3/4 max-sm:h-80"
+          class="w-full h-full object-cover rounded-lg max-xl:h-full max-md:h-3/4 max-sm:h-80"
         />
       </div>
     </div>

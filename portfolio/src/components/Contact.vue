@@ -126,7 +126,7 @@
       </form>
     </div>
     <div v-if="successModal" class="bg-[#181824] p-2 flex justify-center items-center">
-      <p class="text-center">Your message was sent successfully</p>
+      <p class="text-center text-white">Your message was sent successfully</p>
     </div>
   </section>
 </template>
@@ -172,13 +172,17 @@ const validate = () => {
 }
 
 const handleFormSubmission = () => {
-  if (validate()) {
-    console.log(name.value, email.value, message.value)
-    name.value = ''
-    email.value = ''
-    message.value = ''
-    setTimeout(() => (successModal.value = true), 3000)
-  }
+  setTimeout(() => {
+    if (validate()) {
+      console.log(name.value, email.value, message.value)
+      name.value = ''
+      email.value = ''
+      message.value = ''
+      successModal.value = true
+    }
+  }, 2000)
+
+  setTimeout(() => (successModal.value = false), 3000)
 }
 </script>
 
