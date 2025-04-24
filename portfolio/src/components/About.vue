@@ -12,7 +12,7 @@
       user-friendly interfaces that solve real problems.
     </p>
     <span class="mt-5 flex items-center gap-5">
-      <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>2+</b></h1>
+      <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>3+</b></h1>
       <p class="text-xl text-white max-sm:text-[1rem]">
         Years of experience. Specialised in building apps, while ensuring a seamless web experience
         <br />
