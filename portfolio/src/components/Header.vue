@@ -105,9 +105,7 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
-      <button>
-        <FontAwesomeIcon :icon="faNight" />
-      </button>
+      <button></button>
     </div>
     <!-- animation causes light flash -->
     <div

@@ -1,3 +1,6 @@
+
+
+
 <template>
   <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="projects">
     <h2
@@ -13,9 +16,9 @@
       class="mt-10 grid grid-cols-3 place-content-center gap-5 max-xl:grid-cols-2 max-sm:grid-cols-1"
     >
       <article
-        class="bg-[#31313f] rounded-lg w-full h-96 p-5 shadow-2xl"
-        v-for="project in projects"
-        :key="project"
+        class="card bg-[#31313f] rounded-lg w-full h-96 p-5 shadow-2xl overflow-auto transition-all"
+        v-for="(project, index) in projects"
+        :key="project.title"
       >
         <img
           :src="project.imageUrl"
@@ -27,11 +30,23 @@
         >
           {{ project.title }}
         </h3>
-        <p class="text-white leading-6 max-sm:text-sm">
+        <p
+          class="text-white leading-6 max-sm:text-sm transition-all"
+          @click="toggleExpand(index)"
+          :class="
+            projects[index].expanded
+              ? 'animate__animated animate__fadeIn'
+              : 'animate__animated animate__zoomIn'
+          "
+        >
           {{
-            project.description.length <= 80
-              ? project.description
-              : project.description.slice(0, 80) + '...'
+            project.expanded
+              ? project.description.length < 80
+                ? project.description
+                : project.description.slice(0, 80).concat('...see more')
+              : project.description.length > 80
+              ? project.description.concat('...see less')
+              : project.description
           }}
         </p>
         <div class="flex justify-between items-center gap-10 mt-5">
@@ -58,27 +73,27 @@
 
 <script setup>
 import { ref } from 'vue'
-import image from '../assets/images/avatar.jpg'
 
 const projects = ref([
   {
     title: 'E-Store',
     description:
-      'Your destination for the latest trends and timeless classics. Shop now and express your style',
+      'Your destination for the latest trends and timeless classics. Shop now and express your style. Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.',
     imageUrl:
       'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
     liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
     githubLink: 'apc',
+    expanded: false, // Add the expanded property directly here
   },
   {
     title: 'Nola Education',
     description:
-      'A comprehensive learning platform that offers a wide range of interactive courses and engaging quizzes to help you master any subject.',
+      'A comprehensive learning platform that offers a wide range of interactive courses and engaging quizzes to help you master any subject. This project was built using React.js for a dynamic and interactive learning experience.',
     imageUrl:
       'https://img.freepik.com/free-photo/mobile-phone-with-white-screen-diary-near-painting-colors-wooden-table_23-2148050728.jpg?t=st=1741746381~exp=1741749981~hmac=1e67de51fbf3e3359bf4b108230436c0def99738f8de8dc3fc9ffefa046592e3&w=1060',
-
     liveUrl: 'https://learn-with-nola.vercel.app/',
     githubLink: 'https://github.com/masterworkDEV/Learnly-Challenge/tree/main/m-education',
+    expanded: false,
   },
   {
     title: 'Project 2',
@@ -86,6 +101,7 @@ const projects = ref([
     imageUrl: '../assets/images/e-store.png',
     liveUrl: 'https://project2.example.com',
     githubLink: 'apc',
+    expanded: false,
   },
   {
     title: 'Project 2',
@@ -93,6 +109,7 @@ const projects = ref([
     imageUrl: '../assets/images/e-store.png',
     liveUrl: 'https://project2.example.com',
     githubLink: 'apc',
+    expanded: false,
   },
   {
     title: 'Project 2',
@@ -100,9 +117,17 @@ const projects = ref([
     imageUrl: '../assets/images/e-store.png',
     liveUrl: 'https://project2.example.com',
     githubLink: 'apc',
+    expanded: false,
   },
 ])
+
+const toggleExpand = (index) => {
+  projects.value[index].expanded = !projects.value[index].expanded
+}
 </script>
 
 <style>
+.card::-webkit-scrollbar {
+  display: none;
+}
 </style>

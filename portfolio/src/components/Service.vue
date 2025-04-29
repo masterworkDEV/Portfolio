@@ -34,7 +34,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { faFigma } from '@fortawesome/free-brands-svg-icons'
@@ -42,6 +41,8 @@ import { faMobileAndroid } from '@fortawesome/free-solid-svg-icons'
 import { faChartBar } from '@fortawesome/free-regular-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faNpm } from '@fortawesome/free-brands-svg-icons'
+import { ref, onMounted, onUnmounted } from 'vue'
+import useIntersectionObserverStore from '@/stores/intersection-observer'
 
 const myService = ref([
   {
@@ -86,8 +87,8 @@ const myService = ref([
 ])
 </script>
 
-<style scoped>
-.stack:nth-last-child(2) {
+<style >
+cd .stack:nth-last-child(2) {
   border: #7562e0 2px solid;
 }
 .stack:nth-last-child(4) {
