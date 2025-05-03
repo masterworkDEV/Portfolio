@@ -61,7 +61,7 @@
       </div>
     </div>
   </section>
-  <div class="h-16" :class="theme.darkMode ? 'bg-[#181824]' : 'bg-[#333]'"></div>
+  <div class="h-14" :class="theme.darkMode ? 'bg-[#181824]' : 'bg-[#333]'"></div>
 </template>
 
 <script setup>
