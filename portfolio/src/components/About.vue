@@ -1,19 +1,28 @@
 <template >
   <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="about">
     <h2
-      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white"
+      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap"
+      :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
     >
       About Me
     </h2>
-    <p class="mt-2 tracking-wide leading-7 text-white max-sm:text-sm">
+    <p
+      class="mt-2 tracking-wide leading-7 max-sm:text-sm"
+      :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
+    >
       I'm a passionate frontend developer with a keen eye for detail and a love for creating
       engaging user experiences. I specialize in
       <b>React.JS, Vue.JS, Node.JS,MongoDB, </b>. My goal is to build clean, efficient, and
       user-friendly interfaces that solve real problems.
     </p>
     <span class="mt-5 flex items-center gap-5">
-      <h1 class="text-[#7562e0] text-6xl flex items-center max-sm:text-5xl"><b>3+</b></h1>
-      <p class="text-xl text-white max-sm:text-[1rem]">
+      <h1
+        class="text-6xl flex items-center max-sm:text-5xl"
+        :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+      >
+        <b>3+</b>
+      </h1>
+      <p class="text-xl max-sm:text-[1rem]" :class="theme.darkMode ? 'text-white' : 'text-[#333]'">
         Years of experience. Specialised in building apps, while ensuring a seamless web experience
         <br />
         for end users.
@@ -22,6 +31,7 @@
     <div class="mt-10 grid grid-cols-4 place-content-center gap-10 max-xl:gap-4 max-sm:gap-2">
       <div
         class="stack bg-[#bdbdbd] w-full h-52 max-sm:h-30 flex justify-end flex-col text-start items-start"
+        :class="theme.darkMode ? 'text-white' : 'active text-[#333] '"
         v-for="service of myService.slice(0, 4)"
         :key="service"
       >
@@ -53,6 +63,9 @@ import { faMobileAndroid } from '@fortawesome/free-solid-svg-icons'
 import { faChartBar } from '@fortawesome/free-regular-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faNpm } from '@fortawesome/free-brands-svg-icons'
+import useTheme from '@/stores/theme'
+
+const theme = useTheme()
 
 const myService = ref([
   {
@@ -97,8 +110,11 @@ const myService = ref([
 ])
 </script>
 
-<style scoped>
+<style>
 .stack:first-child {
   background: #7562e0;
+}
+.stack.active:first-child {
+  background: #333;
 }
 </style>

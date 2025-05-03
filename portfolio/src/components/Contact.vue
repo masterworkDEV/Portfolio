@@ -2,17 +2,23 @@
   <section class="mx-auto px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="contact">
     <div class="flex justify-between items-start max-sm:block">
       <div>
-        <h3 class="text-2xl max-sm:text-[1rem] font-semibold text-[#7562e0] dark:text-white">
+        <h3
+          class="text-2xl max-sm:text-[1rem] font-semibold"
+          :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+        >
           Connect with me:
         </h3>
-        <p class="text-white">Satisfied with me? Please contact me</p>
+        <p :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'">
+          Satisfied with me? Please contact me
+        </p>
         <ul class="flex items-center gap-5 mt-5">
           <li>
             <a href="">
               <FontAwesomeIcon
                 :icon="faInstagram"
                 size="xl"
-                class="text-[#7562e0] hover:text-white transition"
+                class="hover:text-white transition"
+                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
               />
             </a>
           </li>
@@ -22,7 +28,8 @@
               <FontAwesomeIcon
                 :icon="faTwitter"
                 size="xl"
-                class="text-[#7562e0] hover:text-white transition"
+                class="hover:text-white transition"
+                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
               />
             </a>
           </li>
@@ -31,7 +38,8 @@
               <FontAwesomeIcon
                 :icon="faLinkedinIn"
                 size="xl"
-                class="text-[#7562e0] hover:text-white transition"
+                class="hover:text-white transition"
+                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
               />
             </a>
           </li>
@@ -40,14 +48,20 @@
               <FontAwesomeIcon
                 :icon="faMailBulk"
                 size="xl"
-                class="text-[#7562e0] hover:text-white transition"
+                class="hover:text-white transition"
+                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
               />
             </a>
           </li>
         </ul>
       </div>
       <form class="w-2/4 max-sm:w-full max-sm:mt-10 mb-5" @submit.prevent="handleFormSubmission">
-        <h4 class="text-xl max-sm:text-[1rem] text-white mb-5">Contact me let's make magic</h4>
+        <h4
+          class="text-xl max-sm:text-[1rem] mb-5"
+          :color="theme.darkMode ? 'text-white' : 'text-[#333]'"
+        >
+          Contact me let's make magic
+        </h4>
 
         <label for=" username"></label>
         <div class="flex mb-3">
@@ -70,7 +84,8 @@
             type="text"
             name="name"
             id="website-admin"
-            class="rounded-none rounded-e-lg bg-[#31313f] text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
+            class="rounded-none rounded-e-lg text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
+            :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
             placeholder="John Doe..."
             v-model="name"
           />
@@ -100,7 +115,8 @@
             type="text"
             name="email"
             id="website-admin"
-            class="rounded-none rounded-e-lg bg-[#31313f] text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
+            class="rounded-none rounded-e-lg text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
+            :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
             placeholder="Johndoe@gmail.com"
             v-model="email"
           />
@@ -110,7 +126,8 @@
         <textarea
           id="message"
           rows="4"
-          class="mb-4 block p-2.5 w-full text-sm text-white bg-[#31313f] rounded-lg focus:ring-blue-500 dark:placeholder-gray-400 dark:text-white"
+          class="mb-4 block p-2.5 w-full text-sm text-white rounded-lg focus:ring-blue-500 dark:placeholder-gray-400"
+          :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
           required
           placeholder="Write your thoughts here..."
           v-model="message"
@@ -118,7 +135,8 @@
         </textarea>
 
         <button
-          class="w-1/4 p-2.5 text-white bg-[#7562e0] rounded-lg max-sm:w-full"
+          class="w-1/4 p-2.5 text-white rounded-lg max-sm:w-full"
+          :class="theme.darkMode ? 'bg-[#7562e0]' : 'bg-[#333] '"
           :disabled="!validate"
         >
           Send
@@ -138,6 +156,9 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import useTheme from '@/stores/theme'
+//  call theme
+const theme = useTheme()
 
 const name = ref('')
 const email = ref('')

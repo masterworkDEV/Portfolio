@@ -15,7 +15,8 @@
           <FontAwesomeIcon
             :icon="faInstagram"
             size="xl"
-            class="text-[#7562e0] hover:text-white transition"
+            class="hover:text-white transition"
+            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
           />
         </a>
       </li>
@@ -25,7 +26,8 @@
           <FontAwesomeIcon
             :icon="faTwitter"
             size="xl"
-            class="text-[#7562e0] hover:text-white transition"
+            class="hover:text-white transition"
+            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
           />
         </a>
       </li>
@@ -34,7 +36,8 @@
           <FontAwesomeIcon
             :icon="faLinkedinIn"
             size="xl"
-            class="text-[#7562e0] hover:text-white transition"
+            class="hover:text-white transition"
+            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
           />
         </a>
       </li>
@@ -45,7 +48,8 @@
           <FontAwesomeIcon
             :icon="faMailBulk"
             size="xl"
-            class="text-[#7562e0] hover:text-white transition"
+            class="hover:text-white transition"
+            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
           />
         </a>
       </li>
@@ -59,6 +63,9 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import useTheme from '@/stores/theme'
+
+const theme = useTheme()
 </script>
 
 <style>

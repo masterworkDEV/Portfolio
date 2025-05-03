@@ -4,43 +4,43 @@
 <template>
   <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="projects">
     <h2
-      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0] dark:text-white mt-14 mb-5"
+      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5"
+      :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
     >
       Featured projects:
     </h2>
-    <p class="text-white">
+    <p :class="theme.darkMode ? 'text-white' : 'text-[#333]'">
       I have worked on many projects over the course of being a Web Developer, here are a few of my
       live, real-world projects
     </p>
     <div
-      class="mt-10 grid grid-cols-3 place-content-center gap-5 max-xl:grid-cols-2 max-sm:grid-cols-1"
+      class="project mt-10 grid grid-cols-3 place-content-center gap-5 max-xl:grid-cols-2 max-sm:grid-cols-1"
     >
       <article
-        class="card bg-[#31313f] rounded-lg w-full h-96 p-5 shadow-2xl overflow-auto transition-all"
+        class="card overflow-auto rounded-lg w-full h-96 p-5 shadow-2xl transition-all"
+        :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-white'"
         v-for="(project, index) in projects"
         :key="project.title"
       >
         <img
           :src="project.imageUrl"
           alt=""
-          class="w-full h-2/4 object-cover border border-[#7562e0] opacity-60 rounded-lg"
+          class="w-full h-2/4 object-cover border opacity-60 rounded-lg"
+          :class="theme.darkMode ? ' border-[#7562e0]' : 'border-[#333]'"
         />
         <h3
-          class="self-center text-xl max-sm:text-[1rem] font-semibold uppercase whitespace-nowrap text-[#7562e0] dark:text-white mt-4 mb-2"
+          class="self-center text-xl max-sm:text-[1rem] font-semibold uppercase whitespace-nowrap mt-4 mb-2"
+          :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
         >
           {{ project.title }}
         </h3>
         <p
-          class="text-white leading-6 max-sm:text-sm transition-all"
+          class="leading-6 max-sm:text-sm transition-all"
           @click="toggleExpand(index)"
-          :class="
-            projects[index].expanded
-              ? 'animate__animated animate__fadeIn'
-              : 'animate__animated animate__zoomIn'
-          "
+          :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
         >
           {{
-            project.expanded
+            !project.expanded
               ? project.description.length < 80
                 ? project.description
                 : project.description.slice(0, 80).concat('...see more')
@@ -53,7 +53,8 @@
           <a
             :href="project.liveUrl"
             target="blank"
-            class="w-full h-10 flex text-center justify-center text-white bg-[#7562e0] rounded-lg max-sm:text-sm"
+            class="w-full h-10 flex text-center justify-center text-white rounded-lg max-sm:text-sm"
+            :class="theme.darkMode ? 'bg-[#7562e0] ' : 'bg-[#333]'"
           >
             <button>View Live</button>
           </a>
@@ -61,7 +62,8 @@
           <a
             :href="project.githubLink"
             target="blank"
-            class="w-full h-10 flex text-center justify-center text-white border border-[#7562e0] rounded-lg max-sm:text-sm"
+            class="w-full h-10 flex text-center justify-center border rounded-lg max-sm:text-sm"
+            :class="theme.darkMode ? ' border-[#7562e0]  text-white' : ' text-[#333] border-[#333]'"
           >
             <button>Github Repo</button>
           </a>
@@ -73,12 +75,15 @@
 
 <script setup>
 import { ref } from 'vue'
+import useTheme from '@/stores/theme'
+
+const theme = useTheme()
 
 const projects = ref([
   {
     title: 'E-Store',
     description:
-      'Your destination for the latest trends and timeless classics. Shop now and express your style. Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.',
+      'Your destination for the latest trends and timeless classics. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
     imageUrl:
       'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
     liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
@@ -88,7 +93,7 @@ const projects = ref([
   {
     title: 'Nola Education',
     description:
-      'A comprehensive learning platform that offers a wide range of interactive courses and engaging quizzes to help you master any subject. This project was built using React.js for a dynamic and interactive learning experience.',
+      'A comprehensive learning platform that offers a wide range of interactive courses and engaging quizzes to help you master any subject. (This project was built using React.js for a dynamic and interactive learning experience.)',
     imageUrl:
       'https://img.freepik.com/free-photo/mobile-phone-with-white-screen-diary-near-painting-colors-wooden-table_23-2148050728.jpg?t=st=1741746381~exp=1741749981~hmac=1e67de51fbf3e3359bf4b108230436c0def99738f8de8dc3fc9ffefa046592e3&w=1060',
     liveUrl: 'https://learn-with-nola.vercel.app/',
