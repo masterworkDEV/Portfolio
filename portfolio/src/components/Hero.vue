@@ -1,5 +1,5 @@
 <template>
-  <section class="px-20 max-md:pt-10 max-xl:px-10 max-sm:px-5">
+  <section class="px-16 max-md:pt-10 max-xl:px-7 max-sm:px-4">
     <div class="pt-48 max-sm:pt-24 flex justify-between max-sm:flex-col">
       <div class="w-full">
         <h3 class="pb-3 text-2xl max-md:text-xl animate__animated animate__flipInY">Hello, i'm</h3>
@@ -16,12 +16,11 @@
           meets users' needs.
         </p>
         <div
-          class="flex items-center gap-3 mt-5 max-xl:mb-10 animate__animated animate__fadeInUp animate__delay-3s"
+          class="flex items-center justify-center gap-3 mt-5 max-xl:mb-10 animate__animated animate__fadeInUp animate__delay-3s"
         >
           <a
             href="#about"
-            class="flex items-center justify-center gap-2 w-48 h-10 text-white hover:bg-white hover:text-black rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
-            :class="theme.darkMode ? 'bg-[#7562e0]' : 'bg-[#333]'"
+            class="flex bg-[#7562e0] items-center justify-center gap-2 w-48 max-sm:w-full h-10 text-white hover:bg-white hover:text-black rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
             <button>
               <span> About Me </span>
@@ -32,8 +31,7 @@
           <a
             href="https://www.canva.com/design/DAGlAqwpLng/giGL_s9SN1sdn6cUp90ErQ/view?utm_content=DAGlAqwpLng&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2e62da40b7"
             target="blank"
-            class="flex items-center justify-center gap-2 w-48 h-10 border-2 hover:bg-[#7562e0] rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
-            :class="theme.darkMode ? 'border-[#7562e0]' : 'border-[#333]'"
+            class="flex items-center justify-center gap-2 w-48 max-sm:w-full h-10 border-2 hover:bg-[#7562e0] border-[#7562e0] rounded max-xl:w-40 max-sm:w-28 max-sm:text-sm transition-all"
           >
             <button class="hover:animate-none animate__zoomIn animate-bounce animate__delay-5s">
               <span> Resume </span>
@@ -61,7 +59,7 @@
       </div>
     </div>
   </section>
-  <div class="h-14" :class="theme.darkMode ? 'bg-[#181824]' : 'bg-[#333]'"></div>
+  <div class="h-14 bg-[#181824] max-sm:hidden"></div>
 </template>
 
 <script setup>

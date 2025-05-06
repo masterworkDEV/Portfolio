@@ -1,7 +1,8 @@
 <template>
   <footer class="px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-5">
     <ul
-      class="flex justify-between items-center text-[#bdbdbd7e] max-sm:text-[.7rem] max-sm:flex-wrap"
+      class="flex justify-between items-center max-sm:text-[.7rem] max-sm:flex-wrap"
+      :class="theme.darkMode ? 'text-[#bdbdbd7e]' : 'text-[#333]'"
     >
       <li>@2023 masterworkDEV</li>
       <li>Web Developer</li>
@@ -16,7 +17,7 @@
             :icon="faInstagram"
             size="xl"
             class="hover:text-white transition"
-            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+            color="#7562e0"
           />
         </a>
       </li>
@@ -27,7 +28,7 @@
             :icon="faTwitter"
             size="xl"
             class="hover:text-white transition"
-            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+            color="#7562e0"
           />
         </a>
       </li>
@@ -37,7 +38,7 @@
             :icon="faLinkedinIn"
             size="xl"
             class="hover:text-white transition"
-            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+            color="#7562e0"
           />
         </a>
       </li>
@@ -49,7 +50,7 @@
             :icon="faMailBulk"
             size="xl"
             class="hover:text-white transition"
-            :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+            color="#7562e0"
           />
         </a>
       </li>

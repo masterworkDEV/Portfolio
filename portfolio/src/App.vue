@@ -86,7 +86,7 @@ html {
 }
 
 .app.light {
-  background: #dddd;
+  background: #fafafa;
   color: #333;
 }
 section {

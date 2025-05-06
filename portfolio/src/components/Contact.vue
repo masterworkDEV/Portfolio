@@ -2,15 +2,8 @@
   <section class="mx-auto px-20 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="contact">
     <div class="flex justify-between items-start max-sm:block">
       <div>
-        <h3
-          class="text-2xl max-sm:text-[1rem] font-semibold"
-          :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
-        >
-          Connect with me:
-        </h3>
-        <p :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'">
-          Satisfied with me? Please contact me
-        </p>
+        <h3 class="text-2xl max-sm:text-[1rem] font-semibold text-white">Connect with me:</h3>
+        <p class="text-[#7562e0]">Satisfied with me? Please contact me</p>
         <ul class="flex items-center gap-5 mt-5">
           <li>
             <a href="">
@@ -18,7 +11,7 @@
                 :icon="faInstagram"
                 size="xl"
                 class="hover:text-white transition"
-                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+                color="#7562e0"
               />
             </a>
           </li>
@@ -29,7 +22,7 @@
                 :icon="faTwitter"
                 size="xl"
                 class="hover:text-white transition"
-                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+                color="#7562e0"
               />
             </a>
           </li>
@@ -39,7 +32,7 @@
                 :icon="faLinkedinIn"
                 size="xl"
                 class="hover:text-white transition"
-                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+                color="#7562e0"
               />
             </a>
           </li>
@@ -49,7 +42,7 @@
                 :icon="faMailBulk"
                 size="xl"
                 class="hover:text-white transition"
-                :color="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+                color="#7562e0"
               />
             </a>
           </li>
@@ -84,8 +77,7 @@
             type="text"
             name="name"
             id="website-admin"
-            class="rounded-none rounded-e-lg text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
-            :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
+            class="rounded-none rounded-e-lg text-[#333] block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0 border border-[#7562e0]"
             placeholder="John Doe..."
             v-model="name"
           />
@@ -115,8 +107,7 @@
             type="text"
             name="email"
             id="website-admin"
-            class="rounded-none rounded-e-lg text-white block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0"
-            :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
+            class="rounded-none rounded-e-lg text-[#333] block flex-1 min-w-0 w-full text-sm p-2.5 dark:placeholder-gray-400 dark:text-white outline-0 border border-[#7562e0]"
             placeholder="Johndoe@gmail.com"
             v-model="email"
           />
@@ -126,8 +117,7 @@
         <textarea
           id="message"
           rows="4"
-          class="mb-4 block p-2.5 w-full text-sm text-white rounded-lg focus:ring-blue-500 dark:placeholder-gray-400"
-          :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-[#ddd] border border-white'"
+          class="mb-4 block p-2.5 w-full text-sm text-[#333] rounded-lg focus:ring-blue-500 border border-[#7562e0] dark:placeholder-gray-400"
           required
           placeholder="Write your thoughts here..."
           v-model="message"
@@ -135,8 +125,7 @@
         </textarea>
 
         <button
-          class="w-1/4 p-2.5 text-white rounded-lg max-sm:w-full"
-          :class="theme.darkMode ? 'bg-[#7562e0]' : 'bg-[#333] '"
+          class="w-1/4 p-2.5 text-white rounded-lg max-sm:w-full bg-[#7562e0]"
           :disabled="!validate"
         >
           Send

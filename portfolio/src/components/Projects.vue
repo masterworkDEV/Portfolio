@@ -4,8 +4,7 @@
 <template>
   <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="projects">
     <h2
-      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5"
-      :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+      class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5 text-[#7562e0]"
     >
       Featured projects:
     </h2>
@@ -17,7 +16,7 @@
       class="project mt-10 grid grid-cols-3 place-content-center gap-5 max-xl:grid-cols-2 max-sm:grid-cols-1"
     >
       <article
-        class="card overflow-auto rounded-lg w-full h-96 p-5 shadow-2xl transition-all"
+        class="card w-full h-96 rounded-lg p-5 shadow-xl transition-all overflow-y-auto"
         :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-white'"
         v-for="(project, index) in projects"
         :key="project.title"
@@ -25,8 +24,7 @@
         <img
           :src="project.imageUrl"
           alt=""
-          class="w-full h-2/4 object-cover border opacity-60 rounded-lg"
-          :class="theme.darkMode ? ' border-[#7562e0]' : 'border-[#333]'"
+          class="w-full h-2/4 object-cover border opacity-60 rounded-lg border-[#7562e0]"
         />
         <h3
           class="self-center text-xl max-sm:text-[1rem] font-semibold uppercase whitespace-nowrap mt-4 mb-2"
@@ -53,8 +51,7 @@
           <a
             :href="project.liveUrl"
             target="blank"
-            class="w-full h-10 flex text-center justify-center text-white rounded-lg max-sm:text-sm"
-            :class="theme.darkMode ? 'bg-[#7562e0] ' : 'bg-[#333]'"
+            class="w-full h-10 flex text-center justify-center text-white rounded-lg max-sm:text-sm bg-[#7562e0]"
           >
             <button>View Live</button>
           </a>
@@ -62,8 +59,8 @@
           <a
             :href="project.githubLink"
             target="blank"
-            class="w-full h-10 flex text-center justify-center border rounded-lg max-sm:text-sm"
-            :class="theme.darkMode ? ' border-[#7562e0]  text-white' : ' text-[#333] border-[#333]'"
+            class="w-full h-10 flex text-center justify-center border rounded-lg max-sm:text-sm border-[#7562e0]"
+            :class="theme.darkMode ? '   text-white' : ' text-[#333] '"
           >
             <button>Github Repo</button>
           </a>

@@ -1,5 +1,5 @@
 <template >
-  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-sm:px-5" id="about">
+  <section class="px-16 pt-10  max-xl:px-1 max-sm:px-4" id="about">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap"
       :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
@@ -17,8 +17,8 @@
     </p>
     <span class="mt-5 flex items-center gap-5">
       <h1
-        class="text-6xl flex items-center max-sm:text-5xl"
-        :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
+        class="text-6xl flex items-center max-sm:text-5xl text-[#7562e0]"
+
       >
         <b>3+</b>
       </h1>
@@ -31,7 +31,7 @@
     <div class="mt-10 grid grid-cols-4 place-content-center gap-10 max-xl:gap-4 max-sm:gap-2">
       <div
         class="stack bg-[#bdbdbd] w-full h-52 max-sm:h-30 flex justify-end flex-col text-start items-start"
-        :class="theme.darkMode ? 'text-white' : 'active text-[#333] '"
+        :class="theme.darkMode ? 'text-white' : ' text-[#333] '"
         v-for="service of myService.slice(0, 4)"
         :key="service"
       >
