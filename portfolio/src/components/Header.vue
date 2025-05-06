@@ -2,7 +2,7 @@
   <header class="header fixed top-0 right-0 left-0 z-40">
     <nav
       class="nav right-0 left-0 top-0 pt-8 pb-8 max-sm:pt-4 max-sm:pb-4 z-30"
-      :class="theme.darkMode ? 'bg-[#181824]' : 'bg-[#fafafa] border-b border-gray-200'"
+      :class="theme.darkMode ? 'bg-[#1a1a29]' : 'bg-[#fafafa] border-b border-gray-200'"
     >
       <div class="flex flex-wrap items-center justify-between px-16 max-xl:px-7 max-sm:px-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -92,7 +92,6 @@
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <button></button>
       </div>
     </transition>
 
@@ -100,12 +99,11 @@
 
     <!-- button to toggle  -->
     <button
-      class="fixed right-7 bottom-10 z-40 p-2 w-10 h-10 rounded-full flex justify-center text-center items-center"
-      :class="theme.darkMode ? 'bg-[#7562e0]' : 'bg-[#333]'"
+      class="fixed bg-[#7562e0] right-7 bottom-10 z-40 p-2 w-10 h-10 rounded-full flex justify-center text-center items-center"
       @click="toggleTheme"
     >
-      <FontAwesomeIcon :icon="faMoon" v-if="theme.darkMode" color="white" />
-      <FontAwesomeIcon :icon="faSun" v-else color="white" />
+      <FontAwesomeIcon :icon="faSun" v-if="theme.darkMode" color="white" />
+      <FontAwesomeIcon :icon="faMoon" v-else color="white" />
     </button>
   </header>
 </template>
@@ -116,28 +114,17 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import useTheme from '@/stores/theme'
 
+// use theme
 const theme = useTheme()
 
 const toggleTheme = () => {
   theme.darkMode = !theme.darkMode
 }
 
-const initialScroll = ref(null)
+//  nav menu
 const navbar = ref(false)
-
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      initialScroll.value = true
-    } else {
-      initialScroll.value = null
-    }
-  })
-})
-
 const handleNavbar = () => {
   navbar.value = !navbar.value
-  console.log(navbar.value)
 }
 </script>
 

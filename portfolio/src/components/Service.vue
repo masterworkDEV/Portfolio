@@ -8,7 +8,7 @@
     </h2>
     <div class="service grid grid-cols-3 place-content-center gap-5 max-sm:grid-cols-2">
       <article
-        class="stack rounded-2xl w-full h-72 max-sm:max-h-40 flex justify-center flex-col items-center p-3 overflow-auto"
+        class="stack rounded-2xl w-full h-72 max-sm:max-h-40 flex justify-center flex-col items-center p-3 shadow-2xl overflow-auto"
         v-for="service of myService"
         :key="service"
       >
