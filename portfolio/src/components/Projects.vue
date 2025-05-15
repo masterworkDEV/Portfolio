@@ -2,7 +2,7 @@
 
 
 <template>
-  <section class="mx-auto px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="projects">
+  <section class="mx-auto px-16 pt-10 max-md:pt-10 max-xl:px-7 max-md:px-4" id="projects">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5 text-[#7562e0]"
     >
@@ -17,7 +17,7 @@
     >
       <article
         class="card w-full h-96 rounded-lg p-5 shadow-xl transition-all overflow-y-auto"
-        :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-white'"
+        :class="theme.darkMode ? 'bg-[#31313f]' : 'bg-white '"
         v-for="(project, index) in projects"
         :key="project.title"
       >
@@ -98,10 +98,11 @@ const projects = ref([
     expanded: false,
   },
   {
-    title: 'Project 2',
-    description: 'Another project description.',
+    title: 'Blem Beauty Supply',
+    description:
+      'Your destination for the latest trends and timeless classics, wrist watches, makeups and more. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
     imageUrl: '../assets/images/e-store.png',
-    liveUrl: 'https://project2.example.com',
+    liveUrl: 'sydney-beauty-supply-o8ac.vercel.app',
     githubLink: 'apc',
     expanded: false,
   },

@@ -1,5 +1,5 @@
 <template >
-  <section class="px-16 pt-10  max-xl:px-1 max-sm:px-4" id="about">
+  <section class="px-16 pt-10 max-xl:px-1 max-sm:px-4" id="about">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap"
       :class="theme.darkMode ? 'text-white' : 'text-[#333]'"
@@ -16,10 +16,7 @@
       user-friendly interfaces that solve real problems.
     </p>
     <span class="mt-5 flex items-center gap-5">
-      <h1
-        class="text-6xl flex items-center max-sm:text-5xl text-[#7562e0]"
-
-      >
+      <h1 class="text-6xl flex items-center max-sm:text-5xl text-[#7562e0]">
         <b>3+</b>
       </h1>
       <p class="text-xl max-sm:text-[1rem]" :class="theme.darkMode ? 'text-white' : 'text-[#333]'">

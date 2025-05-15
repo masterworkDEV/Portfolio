@@ -1,5 +1,5 @@
 <template>
-  <section class="px-20 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-5" id="service">
+  <section class="px-16 pt-10 max-md:pt-10 max-xl:px-7 max-md:px-4" id="service">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5"
       :class="theme.darkMode ? 'text-[#7562e0]' : 'text-[#333]'"
@@ -8,7 +8,7 @@
     </h2>
     <div class="service grid grid-cols-3 place-content-center gap-5 max-sm:grid-cols-2">
       <article
-        class="stack rounded-2xl w-full h-72 max-sm:max-h-40 flex justify-center flex-col items-center p-3 shadow-2xl overflow-auto"
+        class="stack rounded-2xl w-full h-72 max-sm:max-h-40 flex justify-center flex-col items-center p-3 shadow-2xl overflow-auto border border-gray-500"
         v-for="service of myService"
         :key="service"
       >

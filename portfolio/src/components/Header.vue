@@ -8,7 +8,7 @@
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span
             class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0]"
-            >masterworkDEV</span
+            >Masterwork Web Solutions</span
           >
         </a>
         <button
@@ -40,22 +40,38 @@
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links"
           >
-            <li class="hover:underline cursor-pointer">
+            <li class="hover:underline cursor-pointer bg-[#7562e0] rounded-sm">
               <a href="#" class="block py-2 px-3 rounded-sm md:p- text-sm" aria-current="page"
                 >Home</a
               >
             </li>
             <li class="hover:underline cursor-pointer">
-              <a href="#about" class="block py-2 px-3 rounded-sm text-sm">About</a>
+              <a
+                href="#about"
+                class="block py-2 px-3 rounded-sm text-sm hover:scale-90 transition-all"
+                >About</a
+              >
             </li>
             <li class="hover:underline cursor-pointer">
-              <a href="#service" class="block py-2 px-3 rounded-sm text-sm">Services</a>
+              <a
+                href="#service"
+                class="block py-2 px-3 rounded-sm text-sm hover:scale-90 transition-all"
+                >Services</a
+              >
             </li>
             <li class="hover:underline cursor-pointer">
-              <a href="#projects" class="block py-2 px-3 rounded-sm text-sm">Projects</a>
+              <a
+                href="#projects"
+                class="block py-2 px-3 rounded-sm text-sm hover:scale-90 transition-all"
+                >Projects</a
+              >
             </li>
             <li class="hover:underline cursor-pointer">
-              <a href="#contact" class="block py-2 px-3 rounded-sm text-sm">Contact</a>
+              <a
+                href="#contact"
+                class="block py-2 px-3 rounded-sm text-sm hover:scale-90 transition-all"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -74,7 +90,7 @@
         "
       >
         <ul
-          class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links animate__animated animate__fadeIn animate__delay-1s"
+          class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links animate__animated animate__fadeIn"
         >
           <li class="px-3 py-2" @click="navbar = !navbar">
             <a href="#" aria-current="page">Home</a>
@@ -118,7 +134,8 @@ import useTheme from '@/stores/theme'
 const theme = useTheme()
 
 const toggleTheme = () => {
-  theme.darkMode = !theme.darkMode
+  alert('Working on theme in progress, check back later')
+  // theme.darkMode = !theme.darkMode
 }
 
 //  nav menu

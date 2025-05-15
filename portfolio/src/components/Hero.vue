@@ -45,17 +45,10 @@
           </a>
         </div>
       </div>
-      <div class="animate__animated animate__fadeIn animate__delay-4s w-full h-full">
+      <div class="w-full h-full flex justify-center items-center">
         <video
-          v-if="theme.darkMode"
+
           :src="video"
-          loop
-          autoplay
-          class="w-full h-full object-cover rounded-lg max-xl:h-full max-md:h-3/4 max-sm:h-80"
-        ></video>
-        <video
-          v-else
-          :src="video2"
           loop
           autoplay
           class="w-full h-full object-cover rounded-lg max-xl:h-full max-md:h-3/4 max-sm:h-80"
@@ -73,11 +66,15 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 import video from '../assets/videos/portfolio.mp4'
-import video2 from '../assets/videos/portfolio dark.mp4'
 import useTheme from '@/stores/theme'
 
 //  theme
 const theme = useTheme()
+// animated videos,
+const currentIndex = ref(0)
+
+
+
 
 const text = ref(
   "I'm a software developer with a creative mind and a problem-solving spirit. I believe in writing clean, maintainable code and am committed to delivering high-quality software that meets users' needs."
