@@ -101,8 +101,9 @@ const projects = ref([
     title: 'Blem Beauty Supply',
     description:
       'Your destination for the latest trends and timeless classics, wrist watches, makeups and more. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
-    imageUrl: '../assets/images/e-store.png',
-    liveUrl: 'sydney-beauty-supply-o8ac.vercel.app',
+    imageUrl:
+      'https://www.freepik.com/free-photo/cosmetics-composition-with-serum-bottles_8269793.htm#fromView=search&page=1&position=20&uuid=15f7fec0-c756-482d-aaae-372c21ba7cbd&query=cosmetics',
+    liveUrl: 'https://sydney-beauty-supply-rgom.vercel.app/',
     githubLink: 'apc',
     expanded: false,
   },

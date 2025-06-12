@@ -8,7 +8,7 @@
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span
             class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0]"
-            >Masterwork Web Solutions</span
+            >Masterwork</span
           >
         </a>
         <button
