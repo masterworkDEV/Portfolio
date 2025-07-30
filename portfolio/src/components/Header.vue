@@ -1,13 +1,13 @@
 <template>
   <header class="header fixed top-0 right-0 left-0 z-40">
     <nav
-      class="nav right-0 left-0 top-0 pt-8 pb-8 max-sm:pt-4 max-sm:pb-4 z-30"
+      class="nav right-0 left-0 top-0 pt-6 pb-6 max-sm:pt-4 max-sm:pb-4 z-30 shadow-md"
       :class="theme.darkMode ? 'bg-[#1a1a29]' : 'bg-[#fafafa] border-b border-gray-200'"
     >
       <div class="flex flex-wrap items-center justify-between px-16 max-xl:px-7 max-sm:px-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span
-            class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-[#7562e0]"
+            class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-white"
             >Masterwork</span
           >
         </a>
@@ -40,10 +40,8 @@
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links"
           >
-            <li class="hover:underline cursor-pointer bg-[#7562e0] rounded-sm">
-              <a href="#" class="block py-2 px-3 rounded-sm md:p- text-sm" aria-current="page"
-                >Home</a
-              >
+            <li class="hover:underline cursor-pointer border-b-2 border-[#7562e0] py-2">
+              <a href="#" class="block px-3 rounded-sm text-sm" aria-current="page">Home</a>
             </li>
             <li class="hover:underline cursor-pointer">
               <a
@@ -85,12 +83,15 @@
         class="navbar hidden"
         :class="
           theme.darkMode && navbar
-            ? ' max-sm:block bg-[#181824] '
+            ? ' max-sm:block fixed  top-0 z-50 bg-[#7562e0] w-full h-full '
             : !theme.darkMode && navbar && 'max-sm:block bg-[#fafafa] '
         "
       >
+        <button class="m-3" @click="navbar = !navbar">
+          <FontAwesomeIcon :icon="faTimes" size="xl" />
+        </button>
         <ul
-          class="font-medium flex flex-col p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links animate__animated animate__fadeIn"
+          class="font-medium flex flex-col pt-14 px-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bord nav-links animate__animated animate__fadeIn"
         >
           <li class="px-3 py-2" @click="navbar = !navbar">
             <a href="#" aria-current="page">Home</a>
@@ -111,8 +112,6 @@
       </div>
     </transition>
 
-    <div v-if="navbar" class="overlay w-full h-full fixed bg-[rgba(0,0,0,0.3)] z-10"></div>
-
     <!-- button to toggle  -->
     <button
       class="fixed bg-[#7562e0] right-7 bottom-10 z-40 p-2 w-10 h-10 rounded-full flex justify-center text-center items-center"
@@ -127,7 +126,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun, faTimes } from '@fortawesome/free-solid-svg-icons'
 import useTheme from '@/stores/theme'
 
 // use theme
