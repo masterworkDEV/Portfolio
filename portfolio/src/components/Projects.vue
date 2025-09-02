@@ -93,7 +93,7 @@ const projects = ref([
     description:
       "Reliant Route Dispatch provides freight dispatching services for independent truckers and small fleet owners. The company's goal is to help these clients find and secure profitable loads, manage paperwork, a",
     imageUrl: image,
-    liveUrl: 'reliantroutedispatch.com',
+    liveUrl: 'https://reliantroutedispatch.com',
     githubLink: 'https://github.com/masterworkDEV/ReliantRouteDispatch',
     expanded: false, // Add the expanded property directly here
   },
