@@ -73,6 +73,7 @@
 <script setup>
 import { ref } from 'vue'
 import useTheme from '@/stores/theme'
+import image from '@/assets/images/reliant.jpg'
 
 const theme = useTheme()
 
@@ -85,6 +86,15 @@ const projects = ref([
       'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
     liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
     githubLink: 'apc',
+    expanded: false, // Add the expanded property directly here
+  },
+  {
+    title: 'Reliant Route Dispatch',
+    description:
+      "Reliant Route Dispatch provides freight dispatching services for independent truckers and small fleet owners. The company's goal is to help these clients find and secure profitable loads, manage paperwork, a",
+    imageUrl: image,
+    liveUrl: 'reliantroutedispatch.com',
+    githubLink: 'https://github.com/masterworkDEV/ReliantRouteDispatch',
     expanded: false, // Add the expanded property directly here
   },
   {
