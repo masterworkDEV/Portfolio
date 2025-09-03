@@ -79,6 +79,15 @@ const theme = useTheme()
 
 const projects = ref([
   {
+    title: 'Reliant Route Dispatch',
+    description:
+      "Reliant Route Dispatch provides freight dispatching services for independent truckers and small fleet owners. The company's goal is to help these clients find and secure profitable loads, manage paperwork, a",
+    imageUrl: image,
+    liveUrl: 'https://reliantroutedispatch.com',
+    githubLink: 'https://github.com/masterworkDEV/ReliantRouteDispatch',
+    expanded: false, // Add the expanded property directly here
+  },
+  {
     title: 'E-Store',
     description:
       'Your destination for the latest trends and timeless classics. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
@@ -88,15 +97,7 @@ const projects = ref([
     githubLink: 'apc',
     expanded: false, // Add the expanded property directly here
   },
-  {
-    title: 'Reliant Route Dispatch',
-    description:
-      "Reliant Route Dispatch provides freight dispatching services for independent truckers and small fleet owners. The company's goal is to help these clients find and secure profitable loads, manage paperwork, a",
-    imageUrl: image,
-    liveUrl: 'https://reliantroutedispatch.com',
-    githubLink: 'https://github.com/masterworkDEV/ReliantRouteDispatch',
-    expanded: false, // Add the expanded property directly here
-  },
+
   {
     title: 'Nola Education',
     description:
