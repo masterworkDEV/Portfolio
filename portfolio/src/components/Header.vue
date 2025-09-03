@@ -4,7 +4,7 @@
       class="nav right-0 left-0 top-0 pt-6 pb-6 max-sm:pt-4 max-sm:pb-4 z-30 shadow-md"
       :class="theme.darkMode ? 'bg-[#1a1a29]' : 'bg-[#fafafa] border-b border-gray-200'"
     >
-      <div class="flex flex-wrap items-center justify-between px-16 max-xl:px-7 max-sm:px-4">
+      <div class="flex flex-wrap items-center justify-between px-16 max-xl:px-10 max-sm:px-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span
             class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap text-white"

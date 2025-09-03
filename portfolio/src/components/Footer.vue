@@ -1,5 +1,5 @@
 <template>
-  <footer class="px-16 pt-24 max-md:pt-10 max-xl:px-7 max-sm:px-4">
+  <footer class="px-16 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-4">
     <ul
       class="flex justify-between items-center max-sm:text-[.7rem] max-sm:flex-wrap"
       :class="theme.darkMode ? 'text-[#bdbdbd7e]' : 'text-[#333]'"

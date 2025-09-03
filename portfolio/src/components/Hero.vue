@@ -1,14 +1,14 @@
 <template>
   <header
-    class="min-h-screen pt-40 px-16 flex items-center justify-center max-xl:px-7 max-sm:pt-24 max-sm:px-4"
+    class="min-h-screen pt-40 px-16 flex items-center justify-center max-xl:px-10 max-sm:pt-24 max-sm:px-4"
   >
     <div class="flex items-center gap-16 w-full max-w-7xl max-xl:gap-8 max-md:gap-4 max-sm:block">
       <div class="w-full">
-        <h3 class="text-2xl text-[#7562e0] animate-fadeIn max-md:text-xl">Hello, i'm</h3>
-        <h1 class="text-6xl text-white animate-slideInUp max-xl:text-5xl max-sm:text-3xl">
+        <h3 class="text-2xl text-[#7562e0] animate-fadeIn max-md:text-xl mb-2">Hello, i'm</h3>
+        <h1 class="text-7xl text-white animate-slideInUp max-xl:text-6xl max-sm:text-4xl">
           Godwin Kelvin
         </h1>
-        <h2 class="text-4xl text-white mt-2 max-xl:text-3xl max-sm:text-2xl">
+        <h2 class="text-4xl text-white max-xl:text-3xl max-sm:text-2xl my-4">
           a <span class="text-[#7562e0] font-bold">{{ displayedRole }}</span>
           <span class="cursor">|</span>
         </h2>
@@ -45,12 +45,14 @@
         </div>
       </div>
       <div class="w-full flex justify-center max-sm:mt-8">
-        <!-- <img
-          :src="image"
-          alt="Godwin Kelvin"
-          class="w-full max-w-md h-auto rounded-xl shadow-lg animate-fadeInScale max-xl:h-full max-md:h-3/4 max-sm:h-80"
-        /> -->
-        <video :src="video" loop preload="true" muted autoplay></video>
+        <video
+          :src="video"
+          loop
+          preload="true"
+          muted
+          autoplay
+          class="w-full h-full rounded-lg"
+        ></video>
       </div>
     </div>
   </header>

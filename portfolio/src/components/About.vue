@@ -1,5 +1,5 @@
 <template >
-  <section class="px-16 pt-10 max-xl:px-1 max-sm:px-4" id="about">
+  <section class="px-16 pt-10 max-xl:px-10 max-sm:px-4" id="about">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap"
       :class="theme.darkMode ? 'text-white' : 'text-[#333]'"

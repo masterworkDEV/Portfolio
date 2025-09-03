@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto px-16 pt-24 max-md:pt-10 max-xl:px-7 max-sm:px-4" id="contact">
+  <section class="mx-auto px-16 pt-24 max-md:pt-10 max-xl:px-10 max-sm:px-4" id="contact">
     <div class="flex justify-between items-start max-sm:block">
       <div>
         <h3 class="text-2xl max-sm:text-[1rem] font-semibold text-white">Connect with me:</h3>

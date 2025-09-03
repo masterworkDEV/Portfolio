@@ -2,7 +2,7 @@
 
 
 <template>
-  <section class="mx-auto px-16 pt-10 max-md:pt-10 max-xl:px-7 max-md:px-4" id="projects">
+  <section class="mx-auto px-16 pt-10 max-md:pt-10 max-xl:px-10 max-md:px-4" id="projects">
     <h2
       class="self-center text-2xl max-sm:text-xl font-semibold whitespace-nowrap mt-14 mb-5 text-[#7562e0]"
     >
@@ -88,16 +88,15 @@ const projects = ref([
     expanded: false, // Add the expanded property directly here
   },
   {
-    title: 'E-Store',
+    title: 'Blem Beauty Supply',
     description:
-      'Your destination for the latest trends and timeless classics. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
+      'Your destination for the latest trends and timeless classics, wrist watches, makeups and more. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
     imageUrl:
-      'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
-    liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
+      'https://www.freepik.com/free-photo/cosmetics-composition-with-serum-bottles_8269793.htm#fromView=search&page=1&position=20&uuid=15f7fec0-c756-482d-aaae-372c21ba7cbd&query=cosmetics',
+    liveUrl: 'https://sydney-beauty-supply-rgom.vercel.app/',
     githubLink: 'apc',
-    expanded: false, // Add the expanded property directly here
+    expanded: false,
   },
-
   {
     title: 'Nola Education',
     description:
@@ -109,30 +108,14 @@ const projects = ref([
     expanded: false,
   },
   {
-    title: 'Blem Beauty Supply',
+    title: 'E-Store',
     description:
-      'Your destination for the latest trends and timeless classics, wrist watches, makeups and more. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
+      'Your destination for the latest trends and timeless classics. Shop now and express your style.( Built with Vue.js for a dynamic user interface, Firebase for backend services, Tailwind CSS for styling, and Animate.css for engaging animations.)',
     imageUrl:
-      'https://www.freepik.com/free-photo/cosmetics-composition-with-serum-bottles_8269793.htm#fromView=search&page=1&position=20&uuid=15f7fec0-c756-482d-aaae-372c21ba7cbd&query=cosmetics',
-    liveUrl: 'https://sydney-beauty-supply-rgom.vercel.app/',
+      'https://media-hosting.imagekit.io//d91f4bf2b219444a/Group 84.png?Expires=1836355367&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=haITYPK8R3F45BBncpDUC8gv8vpcXu2ZWOdhc-ZYhcwA-Tcc3YyuesDHlh1lwiXwGrwLWHALKHGx7yrlb5ln29VsJcKL7ipZY7jMTph9eJ0Ack5hxH2eIffAZq0uRrRltHk-21uJ3FvbS3FdUyvBu7wfeaAUg-2EfqzbSHBdWf5P1PosswD6uO7k1rIV--EekrePu8EpvvrL53u~lIdQxukGI8TKU14WRM7lydiC8G26~avcXAK4t~GfVAKppqgrIboOcqCCc8UUpL60xsAyJeUQzSxv90qTf8sMcKw9CLvfgyiDim9qsJiILRT3Gu5amQZvN0EsPOMdphcpsGzJGA__',
+    liveUrl: 'https://ecommerce-development-demo-app-123.vercel.app/',
     githubLink: 'apc',
-    expanded: false,
-  },
-  {
-    title: 'Project 2',
-    description: 'Another project description.',
-    imageUrl: '../assets/images/e-store.png',
-    liveUrl: 'https://project2.example.com',
-    githubLink: 'apc',
-    expanded: false,
-  },
-  {
-    title: 'Project 2',
-    description: 'Another project description.',
-    imageUrl: '../assets/images/e-store.png',
-    liveUrl: 'https://project2.example.com',
-    githubLink: 'apc',
-    expanded: false,
+    expanded: false, // Add the expanded property directly here
   },
 ])
 
